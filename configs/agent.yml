@@ -1,0 +1,7 @@
+agent:
+  region_id: "msk-1"
+  collector_url: "http://localhost:8080"
+  services:
+    - "gosuslugi"
+    - "nalog"
+  max_concurrency: 5

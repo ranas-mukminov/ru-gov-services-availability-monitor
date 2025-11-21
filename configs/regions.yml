@@ -1,0 +1,8 @@
+regions:
+  - id: "msk-1"
+    name: "Moscow DC 1"
+    location: "Moscow, Russia"
+
+  - id: "spb-1"
+    name: "St. Petersburg DC 1"
+    location: "St. Petersburg, Russia"

@@ -1,0 +1,12 @@
+services:
+  - id: "gosuslugi"
+    name: "Public Services Portal"
+    url: "https://example-gosuslugi.ru"
+    expected_status: 200
+    tags: ["federal", "critical"]
+
+  - id: "nalog"
+    name: "Tax Service"
+    url: "https://example-nalog.ru"
+    expected_status: 200
+    tags: ["federal", "finance"]

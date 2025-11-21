@@ -1,0 +1,54 @@
+[project]
+name = "ru-gov-services-availability-monitor"
+version = "0.1.0"
+description = "Distributed monitoring system for Russian government services availability"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "run-as-daemon.ru", email = "info@run-as-daemon.ru"}
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "pydantic>=2.0.0",
+    "PyYAML>=6.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "click>=8.1.0",
+    "jinja2>=3.1.0",
+    "aiofiles>=23.0.0",
+    "python-dateutil>=2.8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "ruff>=0.0.270",
+    "bandit>=1.7.5",
+    "pip-audit>=2.5.0",
+    "types-PyYAML",
+    "types-python-dateutil",
+]
+
+[project.scripts]
+ru-gov-monitor = "ru_gov_services_availability_monitor.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
